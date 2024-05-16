@@ -8,9 +8,9 @@
 	
 	<link rel="stylesheet" href="test.css">
 	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="Style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCjH9BA29r2xk1TK6a0xVb1+0b5zUg0jLHR0" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="../Style.css">
 	
 	<style>
 		.ie-panel{
@@ -26,6 +26,10 @@
 		html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
 			display: block;
 		}
+        .navbar-brand,
+        .navbar-nav .nav-link.active {
+            color: #ad5c21;
+        }
 	</style>
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -177,17 +181,17 @@
 	</div>
 </header>-->
 
-<nav class="navbar navbar-expand-lg navbar-light nav-bg-color fixed-top page-header-corporate">
+<nav class="navbar navbar-expand-lg rd-navbar-classic navbar-light bg-white fixed-top page-header-corporate">
 	<div class="container">
 		
-		<div class="justify-content-center">
+		<div class="justify-content-center rd-navbar-panel">
 			<!-- Mettre le texte "Ekem's Creative" au centre -->
 			<div class="navbar-brand">
 				<!-- Bouton de bascule pour la navigation responsive -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a href="#" class="font-weight-light mx-2">Ekem's Creative</a>
+				<h3 href="#" class="font-weight-light mx-2">Ekem's Creative</h3>
 			</div>
 		</div>
 		
@@ -195,16 +199,19 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link font-weight-bolder active" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Services</a>
+					<a class="nav-link font-weight-bolder" href="#">Produits</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link font-weight-bolder" href="#">Services</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
+					<a class="nav-link font-weight-bolder" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link font-weight-bolder" href="#">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -266,9 +273,9 @@
 							<a class="button button-lg button-secondary button-zakaria" href="#">Read More</a>
 						</div>
 						<div class="col-lg-6 col-xl-3 inset-xl-top-80 position-relative not-animated" data-caption-animate="fadeIn" data-caption-delay="300">
-							<div class="slide-float-items-2"><img src="" alt="">
+							<div class="slide-float-items-2"><img src="images/slide-1-items.png" alt="">
 							</div>
-							<div class="slide-image-wrapper"><img src="images/plural-1.jpg" alt="">
+							<div class="slide-image-wrapper"><img src="images/slide-1.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -297,8 +304,12 @@
 	<div class="container">
 		<div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
 			<div class="col-md-5 col-lg-6 wow fadeInLeft">
-				<div class="intro-wrapper"><img src="https://source.unsplash.com/wfh8dDlNFOk/1920x1080" alt="" width="570" height="410">
-					<div class="quality-label"><span>100%</span><span>quality</span></div>
+				<div class="intro-wrapper">
+					<img src="https://source.unsplash.com/wfh8dDlNFOk/1920x1080" alt="" width="570" height="410">
+					<div class="quality-label">
+						<span>100%</span>
+						<span>quality</span>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-7 col-lg-6 col-xl-5 text-left">
@@ -329,7 +340,7 @@
 								<i class="fas fa-print"></i>
 							</div>
 						</div>
-						<h4 class="box-icon-modern-title"><a href="#">Impression service</a></h4>
+						<h4 class="box-icon-modern-title"><a href="#">Impression</a></h4>
 						<p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
 					</article>
 				</div>
@@ -341,7 +352,7 @@
 								<i class="fas fa-paint-brush" style="color: #FFD43B;"></i> <!-- Sérigraphie -->
 							</div>
 						</div>
-						<h4 class="box-icon-modern-title"><a href="#">Serigraphie service</a></h4>
+						<h4 class="box-icon-modern-title"><a href="#">Serigraphie</a></h4>
 						<p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
 					</article>
 				</div>
@@ -353,7 +364,7 @@
 								<i class="fas fa-tshirt"></i> <!-- Broderie -->
 							</div>
 						</div>
-						<h4 class="box-icon-modern-title"><a href="#">Broderie service</a></h4>
+						<h4 class="box-icon-modern-title"><a href="#">Broderie</a></h4>
 						<p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
 					</article>
 				</div>
@@ -388,66 +399,90 @@
 			<div class="col-sm-6 col-lg-4 wow fadeInUp">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-1-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-1-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Business Cards</a></h4>
-						<div class="thumbnail-subtitle">products</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-1-original.jpg" data-lightgallery="item"><img src="images/home-gallery-1-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">products</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-1-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-1-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
 			<div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".1">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-2-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-2-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Booklets</a></h4>
-						<div class="thumbnail-subtitle">Solutions</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-2-original.jpg" data-lightgallery="item"><img src="images/home-gallery-2-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">Solutions</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-2-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-2-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
 			<div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".2">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-3-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-3-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Posters</a></h4>
-						<div class="thumbnail-subtitle">products</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-3-original.jpg" data-lightgallery="item"><img src="images/home-gallery-3-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">products</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-3-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-3-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
 			<div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-4-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-4-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Folded Leaflets</a></h4>
-						<div class="thumbnail-subtitle">Solutions</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-4-original.jpg" data-lightgallery="item"><img src="images/home-gallery-4-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">Solutions</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-4-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-4-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
 			<div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".4">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-5-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-5-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Postcards</a></h4>
-						<div class="thumbnail-subtitle">Products</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-5-original.jpg" data-lightgallery="item"><img src="images/home-gallery-5-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">Products</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-5-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-5-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
 			<div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5">
 				<!-- Thumbnail Classic-->
 				<article class="thumbnail-modern-2">
-					<div class="thumbnail-modern-figure"><img src="images/home-gallery-6-370x315.jpg" alt="" width="370" height="315">
+					<div class="thumbnail-modern-figure">
+						<img src="images/home-gallery-6-370x315.jpg" alt="" width="370" height="315">
 					</div>
 					<div class="thumbnail-modern-caption-2">
 						<h4 class="thumbnail-modern-title-2"><a href="#">Custom Brochures</a></h4>
-						<div class="thumbnail-subtitle">Solutions</div><a class="button fl-bigmug-line-search74" href="images/home-gallery-6-original.jpg" data-lightgallery="item"><img src="images/home-gallery-6-370x315.jpg" alt="" width="370" height="315"></a>
+						<div class="thumbnail-subtitle">Solutions</div>
+						<a class="button fl-bigmug-line-search74" href="images/home-gallery-6-original.jpg" data-lightgallery="item">
+							<img src="images/home-gallery-6-370x315.jpg" alt="" width="370" height="315">
+						</a>
 					</div>
 				</article>
 			</div>
@@ -628,8 +663,10 @@
 		<div class="row row-30 justify-content-center align-items-md-center">
 			<div class="col-sm-12 col-md-8 col-lg-6 wow fadeInLeft">
 				<div class="inset-xl-right-20">
-					<div class="intro-wrapper text-center"><img src="images/faq-1-550x519.jpg" alt="" width="550" height="519">
-						<div class="label-img"><img src="images/floating-img-1-200x200.jpg" alt="" width="200" height="200">
+					<div class="intro-wrapper text-center">
+						<img src="images/faq-1-550x519.jpg" alt="" width="550" height="519">
+						<div class="label-img">
+							<img src="images/floating-img-1-200x200.jpg" alt="" width="200" height="200">
 						</div>
 					</div>
 				</div>
@@ -720,18 +757,18 @@
 <!-- Product -->
 <section class="section section-xxl bg-default">
 	<div class="container">
-		<h2 class="text-transform-capitalize wow fadeScale">Our Products</h2>
+		<h2 class="text-transform-capitalize wow fadeScale">Nos Produits</h2>
 		<div class="row row-lg row-30 row-lg-50">
 			<div class="col-sm-6 col-md-4 col-lg-3">
 				<!-- Product-->
 				<article class="product wow fadeInRight">
 					<div class="product-body">
-						<div class="product-figure"><img src="images/product-1-118x118.png" alt="" width="118" height="118">
+						<div class="product-figure"><img src="images/realisation09.jpg" alt="" width="118" height="118">
 						</div>
-						<h5 class="product-title"><a href="single-product.html">paper bag</a></h5>
+						<h5 class="product-title"><a href="">HBD Mom house pack</a></h5>
 						<div class="product-price-wrap">
-							<div class="product-price product-price-old">$30.00</div>
-							<div class="product-price">$20.00</div>
+							<div class="product-price product-price-old">XAF 21900.00</div>
+							<div class="product-price">XAF 17650.00</div>
 						</div>
 					</div><span class="product-badge product-badge-sale">Sale</span>
 					<div class="product-button-wrap">
@@ -744,11 +781,11 @@
 				<!-- Product-->
 				<article class="product wow fadeInRight" data-wow-delay=".1s">
 					<div class="product-body">
-						<div class="product-figure"><img src="images/product-2-89x180.png" alt="" width="89" height="180">
+						<div class="product-figure"><img src="images/realisation06.jpg" alt="" width="89" height="180">
 						</div>
-						<h5 class="product-title"><a href="single-product.html">Custom Packaging</a></h5>
+						<h5 class="product-title"><a href="">LadyBug Design</a></h5>
 						<div class="product-price-wrap">
-							<div class="product-price">$13.00</div>
+							<div class="product-price">XAF 12500.00</div>
 						</div>
 					</div><span class="product-badge product-badge-new">New</span>
 					<div class="product-button-wrap">
@@ -761,11 +798,11 @@
 				<!-- Product-->
 				<article class="product wow fadeInRight" data-wow-delay=".2s">
 					<div class="product-body">
-						<div class="product-figure"><img src="images/product-3-157x167.png" alt="" width="157" height="167">
+						<div class="product-figure"><img src="images/realisation05.jpg" alt="" width="157" height="167">
 						</div>
-						<h5 class="product-title"><a href="single-product.html">Notepad</a></h5>
+						<h5 class="product-title"><a href="">Tasses</a></h5>
 						<div class="product-price-wrap">
-							<div class="product-price">$17.00</div>
+							<div class="product-price">XAF 1500.00</div>
 						</div>
 					</div>
 					<div class="product-button-wrap">
@@ -778,11 +815,12 @@
 				<!-- Product-->
 				<article class="product wow fadeInRight" data-wow-delay=".3s">
 					<div class="product-body">
-						<div class="product-figure"><img src="images/product-4-143x179.png" alt="" width="143" height="179">
+						<div class="product-figure">
+							<img src="images/realisation01.jpg" alt="" width="143" height="179">
 						</div>
-						<h5 class="product-title"><a href="single-product.html">white Shopping bag</a></h5>
+						<h5 class="product-title"><a href="">Draps blanc</a></h5>
 						<div class="product-price-wrap">
-							<div class="product-price">$25.00</div>
+							<div class="product-price">XAF 15000.00</div>
 						</div>
 					</div>
 					<div class="product-button-wrap">
@@ -878,9 +916,16 @@
 		<div class="container">
 			<div class="row row-10 align-items-center justify-content-sm-between">
 				<div class="col-md-auto">
-					<p class="rights"><span>©&nbsp;</span><span class="copyright-year">2024</span><span>&nbsp;</span><span>Vector</span><span>.&nbsp; All rights reserved</span></p>
+					<p class="rights">
+						<span>©&nbsp;</span>
+						<span class="copyright-year">2024</span>
+						<span>&nbsp;</span>
+						<span>Mani Entreprises</span>
+						<span>.&nbsp; All rights reserved</span></p>
 				</div>
-				<div class="col-md-auto order-md-1"><a href="privacy-policy.html">Privacy Policy</a></div>
+				<div class="col-md-auto order-md-1">
+					<a href="">Privacy Policy</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -891,5 +936,14 @@
 <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
 <script src="js/script.js"></script>
 <script src="js/core.min.js"></script>
+
+<style>
+    .navbar-brand,
+    .navbar-nav .nav-link.active {
+        color: #ad5c21 !important;
+        font-weight: bold;
+    }
+</style>
+
 </body>
 </html>

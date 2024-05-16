@@ -1,0 +1,109 @@
+.carousel-item {
+    height: 70vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/******************     Bloc Bakground-Color    ********************/
+
+.nav-bg-color {
+    background-color: #343132;
+}
+
+.custom-nav-link {
+    font-family: 'Roboto Light', sans-serif;
+    color: aliceblue;
+}
+
+.mylink {
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+
+    text-decoration: none;
+    color: #f0f8ff;
+}
+
+.my-custom-btn {
+    border-radius: 20px; /* ou toute autre valeur de rayon de bordure que vous préférez */
+    background-color: #343132;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* pour supprimer le soulignement par défaut */
+}
+
+
+
+
+/*******************    Header Style     **************************/
+
+
+.marketing-site-hero {
+    height: 100vh;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.marketing-site-hero {
+    position: relative;
+}
+
+.marketing-site-hero .text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 40em) {
+    .marketing-site-hero {
+        background-position: center center;
+    }
+}
+
+.marketing-site-hero-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.marketing-site-hero-content h1 {
+    font-size: 32px;
+    color: aliceblue;
+}
+
+.marketing-site-hero-content p {
+    color: rgba(240, 248, 255, 0.65);
+}
+
+.marketing-site-hero-content .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+    .marketing-site-hero-content {
+        padding-left: 50%;
+    }
+}
