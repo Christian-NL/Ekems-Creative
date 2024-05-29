@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<title>Ekem's Creative - Contact</title>
@@ -28,7 +28,7 @@
         }
         .navbar-brand,
         .navbar-nav .nav-link.active {
-            color: #ad5c21;
+            color: #FF9027;
         }
 	</style>
 	
@@ -41,14 +41,14 @@
 <!-- Nav -->
 <nav class="navbar navbar-expand-lg rd-navbar-classic navbar-light bg-white fixed-top page-header-corporate">
 	<div class="container">
-		<div class="justify-content-center rd-navbar-panel">
-			<!-- Mettre le texte "Ekem's Creative" au centre -->
-			<div class="navbar-brand">
-				<!-- Bouton de bascule pour la navigation responsive -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<h4 href="#" class="font-weight-light mx-2">Ekem's Creative</h4>
+		<div class="rd-navbar-panel d-flex justify-content-between align-items-center w-100">
+			<!-- Bouton de bascule pour la navigation responsive -->
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="navbar-brand mx-auto">
+				<h4 class="font-weight-light mb-0">Ekem's Creative</h4>
 			</div>
 		</div>
 		
@@ -56,7 +56,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item">
-					<a class="nav-link font-weight-bolder active" href="index.html">Acceuil</a>
+					<a class="nav-link font-weight-bolder" href="index.html">Accueil</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link font-weight-bolder" href="produits.html">Produits</a>
@@ -65,10 +65,10 @@
 					<a class="nav-link font-weight-bolder" href="services.html">Services</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-weight-bolder" href="about_us.html">A Propos</a>
+					<a class="nav-link font-weight-bolder" href="about_us.html">À Propos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-weight-bolder" href="contact_us.html">Contact</a>
+					<a class="nav-link font-weight-bolder active" href="contact_us.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -79,7 +79,7 @@
 <section class="breadcrumbs-custom">
 	<div class="parallax-container" data-parallax-img="images/plural-3.jpg">
 		<div class="material-parallax parallax">
-			<img src="images/plural-3.jpg" alt="" style="display: block; transform: translate3d(-50%, 176px, 0px);">
+			<img src="images/ind-print-2.jpg" alt="" style="display: block; transform: translate3d(-50%, 176px, 0px);">
 		</div>
 		<div class="breadcrumbs-custom-body parallax-content context-dark">
 			<div class="container">
@@ -293,8 +293,46 @@
 <style>
     .navbar-brand,
     .navbar-nav .nav-link.active {
-        color: #ad5c21 !important;
+        color: #FF9027 !important;
         font-weight: bold;
+    }
+
+    /* Assurer que le texte et le bouton de navigation responsive soient sur la même ligne */
+    .rd-navbar-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    /* Enlever les bordures du bouton de navigation responsive et changer la couleur */
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 144, 39, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .custom-toggler {
+        border: none;  /* Enlever les bordures */
+        padding: 0;    /* Enlever le padding */
+        background: none; /* Enlever le fond */
+    }
+
+    /* Ajuster l'espacement des liens de navigation pour éviter le passage à deux lignes */
+    .navbar-nav .nav-link {
+        white-space: nowrap; /* Empêcher le passage à deux lignes */
+        margin-right: 15px;  /* Ajuster l'espacement entre les liens */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 5px;  /* Ajuster l'espacement entre les items */
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link {
+        margin-right: 0; /* Enlever la marge à droite du dernier élément */
     }
 </style>
 
