@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META Tags for SEO -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Pluralistic Communication, MANI Entreprises">
+    
+    <title>Service | Ekem's Creative</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../css/new_service.css">
+</head>
+<body>
+
+    <div id="form-main">
+        <div id="form-div">
+            <form class="form" id="form1" action="../save/save_service.php" method="post" enctype="multipart/form-data">
+                <h2>Ajouter un nouveau service</h2>
+                
+                <p class="name">
+                    <input name="nom_service" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom du service" id="name" />
+                    <span id="name-error"></span>
+                </p>
+                
+                <p class="text">
+                    <textarea name="service_desc" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Description du service. (150 lettres max)"></textarea>
+                    <span id="comment-error"></span>
+                </p>                
+                
+                <div class="submit">
+                <input type="submit" value="SEND" id="button-blue"/>
+                <div class="ease"></div>
+                </div>
+
+                <div>
+                    <a href="../pages/all_service.php" class="back-button">Retour</a>
+                </div>
+            </form>
+        </div>
+
+        <script src="../js/new_service.js"></script>
+    </body>
+</html>

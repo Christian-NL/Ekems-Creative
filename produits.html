@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<link rel="stylesheet" href="test.css">
-	<link rel="stylesheet" href="bootstrap.css">
-	<link rel="stylesheet" href="Style.css">
+	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/Style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCjH9BA29r2xk1TK6a0xVb1+0b5zUg0jLHR0" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
@@ -47,7 +47,7 @@
 			</button>
 			
 			<div class="navbar-brand mx-auto">
-				<h4 class="font-weight-light mb-0">Ekem's Creative</h4>
+				<h4 class="font-weight-light font-weight-bold mb-0">Ekem's Creative</h4>
 			</div>
 		</div>
 		
@@ -75,7 +75,7 @@
 </nav>
 
 <!-- Header -->
-<section class="breadcrumbs-custom">
+<section class="breadcrumbs-custom my-5 mt-5">
 	<div class="parallax-container" data-parallax-img="images/plural-3.jpg">
 		<div class="material-parallax parallax">
 			<img src="images/ind-print-2.jpg" alt="" style="display: block; transform: translate3d(-50%, 176px, 0px);">
@@ -90,8 +90,315 @@
 		<div class="container">
 			<ul class="breadcrumbs-custom-path">
 				<li><a href="index.html">Acceuil</a></li>
+				<i class="fas fa-arrow-right small-icon"></i>
 				<li class="active">Produits</li>
 			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Product -->
+<section class="section section-xxl bg-default text-md-left">
+	<div class="container">
+		<div class="row row-50">
+			<div class="col-lg-4 col-xl-3">
+				<div class="aside row row-30 row-md-50 justify-content-md-between">
+					<div class="aside-item col-sm-6 col-md-5 col-lg-12">
+						<h6 class="aside-title">Categories</h6>
+						<ul class="list-shop-filter">
+							<li>
+								<label class="checkbox-inline">
+									<input name="input-group-radio" value="checkbox-1" type="checkbox" class="checkbox-custom">
+									<span class="checkbox-custom-dummy"></span>Tous les articles
+								</label><span class="list-shop-filter-number">(18)</span>
+							</li>
+							<li>
+								<label class="checkbox-inline">
+									<input name="input-group-radio" value="checkbox-2" type="checkbox" class="checkbox-custom">
+									<span class="checkbox-custom-dummy"></span>Vetements
+								</label><span class="list-shop-filter-number">(9)</span>
+							</li>
+							<li>
+								<label class="checkbox-inline">
+									<input name="input-group-radio" value="checkbox-3" type="checkbox" class="checkbox-custom">
+									<span class="checkbox-custom-dummy"></span>T-Shirt
+								</label><span class="list-shop-filter-number">(5)</span>
+							</li>
+							<li>
+								<label class="checkbox-inline">
+									<input name="input-group-radio" value="checkbox-4" type="checkbox" class="checkbox-custom">
+									<span class="checkbox-custom-dummy"></span>Tasses
+								</label><span class="list-shop-filter-number">(8)</span>
+							</li>
+						</ul>
+						<!-- RD Search Form-->
+						<form class="rd-search form-search" action="" method="GET">
+							<div class="form-wrap">
+								<label class="form-label rd-input-label" for="search-form">rechercher...</label>
+								<input class="form-input" id="search-form" type="text" name="s" autocomplete="off">
+								<button class="button-search fl-bigmug-line-search74" type="submit" disabled="true"></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8 col-xl-9">
+				<div class="product-top-panel group-md">
+					<p class="product-top-panel-title">Les resultats 1–9 sur 28</p>
+				</div>
+				<div class="row row-30 row-lg-50">
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation05.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxxx xxxxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price product-price-old">$20.00</div>
+									<div class="product-price">1200 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation06.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxx xxx xx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">7500 XAF</div>
+								</div>
+							</div> <!-- <span class="product-badge product-badge-new">New</span> -->
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation09.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxx xxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">6500 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation01.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxxxx xxxxxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">11000 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation09.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxxx xxxxxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">9500 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation05.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxx xxxxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price product-price-old">$24.00</div>
+									<div class="product-price">15000 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation09.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">XXXXX XXXX</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">5800 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure"><img src="images/realisation06.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">xxxx xxxx</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">4500 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-6 col-xl-4">
+						<!-- Product-->
+						<article class="product">
+							<div class="product-body">
+								<div class="product-figure">
+									<img src="images/realisation01.jpg" alt="" width="142" height="163">
+								</div>
+								<h5 class="product-title">XXX XXXX XXX</h5>
+								<div class="product-price-wrap">
+									<div class="product-price">2500 XAF</div>
+								</div>
+							</div>
+							<div class="product-button-wrap">
+								<div class="product-button">
+									<a class="button button-primary button-zakaria fl-bigmug-line-search74" href="single-product.html">
+										<i class="fas fa-search small-icon thin-icon"></i> <!-- Loupe -->
+									</a>
+								</div>
+								<div class="product-button">
+									<a class="button button-secondary button-zakaria fl-bigmug-line-shopping202" href="cart-page.html">
+										<i class="fas fa-shopping-cart small-icon thin-icon"></i> <!-- Panier -->
+									</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="pagination-wrap">
+					<!-- Bootstrap Pagination-->
+					<nav aria-label="Page navigation">
+						<ul class="pagination">
+							<li class="page-item page-item-control disabled">
+								<a class="page-link" href="#" aria-label="Previous">
+									<i class="fas fa-arrow-left small-icon"></i>
+									<span class="icon" aria-hidden="true"></span>
+								</a>
+							</li>
+							<li class="page-item active"><span class="page-link">1</span></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item page-item-control">
+								<a class="page-link" href="#" aria-label="Next">
+									<i class="fas fa-arrow-right small-icon"></i>
+									<span class="icon" aria-hidden="true"></span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -104,8 +411,8 @@
 			<div class="row row-40 row-md-50 justify-content-xl-between">
 				<div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight">
 					<div class="footer-classic-brand"><a class="brand" href="index.html">
-						<img class="brand-logo-dark" src="images/img.png" alt="" width="332" height="102" srcset="images/img.png 2x">
-						<img class="brand-logo-light" src="images/img.png" alt="" width="332" height="102" srcset="images/img.png 2x"></a>
+						<img class="brand-logo-dark" src="images/img.png" alt="" width="65" height="65" srcset="images/img.png 2x">
+						<img class="brand-logo-light" src="images/img.png" alt="" width="65" height="65" srcset="images/img.png 2x"></a>
 					</div>
 					<ul class="list-schedule">
 						<li><span>Jour de la Semaine :</span><span>08H - 20H</span></li>

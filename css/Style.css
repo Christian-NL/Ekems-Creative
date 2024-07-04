@@ -107,3 +107,79 @@
         padding-left: 50%;
     }
 }
+
+
+/*        */
+.my-breadcrumbs-custom-path {
+    margin-left: -17px;
+    margin-right: -17px;
+}
+
+.my-breadcrumbs-custom-path > * {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.my-breadcrumbs-custom-path a {
+    display: inline;
+}
+
+.my-breadcrumbs-custom-path a, .my-breadcrumbs-custom-path a:active, .my-breadcrumbs-custom-path a:focus {
+    color: #777777;
+}
+
+.my-breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 600;
+    letter-spacing: .13em;
+    font-family: "Roboto Mono", monospace;
+    text-transform: uppercase;
+}
+
+.my-breadcrumbs-custom-path li::after {
+    display: inline-block;
+    position: absolute;
+    content: "\f101";
+    top: 48%;
+    right: 0;
+    font-size: 14px;
+    line-height: 1.72;
+    font-family: "FontAwesome";
+    color: #151515;
+    transform: translate3d(50%, -50%, 0);
+}
+
+.my-breadcrumbs-custom-path li:last-child:after {
+    display: none;
+}
+
+.my-breadcrumbs-custom-path a:hover,
+.my-breadcrumbs-custom-path li.active {
+    color: #151515;
+}
+
+* + .my-breadcrumbs-custom-path {
+    margin-top: 14px;
+}
+
+.fl-bigmug-line-shopping202:before {
+    content: "\f07a";
+    font-weight: 900;
+    font-family: FontAwesome;
+}
+
+.this-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 0.25rem;
+}

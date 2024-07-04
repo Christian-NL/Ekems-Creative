@@ -2,12 +2,11 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Ekem's Creative - Contact</title>
+	<title>Ekem's Creative - Produits</title>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link rel="stylesheet" href="css/test.css">
-	<link rel="stylesheet" href="css/comment_form.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/Style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCjH9BA29r2xk1TK6a0xVb1+0b5zUg0jLHR0" crossorigin="anonymous">
@@ -39,7 +38,6 @@
 </head>
 <body>
 
-<!-- Nav -->
 <nav class="navbar navbar-expand-lg rd-navbar-classic navbar-light bg-white fixed-top page-header-corporate">
 	<div class="container">
 		<div class="rd-navbar-panel d-flex justify-content-between align-items-center w-100">
@@ -47,8 +45,9 @@
 			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
-			<div class="navbar-brand mx-auto">
+
+			<div class="navbar-brand mx-auto d-flex align-items-center">
+				<img src="assets/img.png" height="35" width="35" class="mr-2">
 				<h4 class="font-weight-light font-weight-bold mb-0">Ekem's Creative</h4>
 			</div>
 		</div>
@@ -60,7 +59,7 @@
 					<a class="nav-link font-weight-bolder" href="index.html">Accueil</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-weight-bolder" href="produits.html">Produits</a>
+					<a class="nav-link font-weight-bolder active" href="produits.html">Produits</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link font-weight-bolder" href="services.html">Services</a>
@@ -69,7 +68,7 @@
 					<a class="nav-link font-weight-bolder" href="about_us.html">À Propos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-weight-bolder active" href="contact_us.html">Contact</a>
+					<a class="nav-link font-weight-bolder" href="contact_us.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -84,7 +83,7 @@
 		</div>
 		<div class="breadcrumbs-custom-body parallax-content context-dark">
 			<div class="container">
-				<h2 class="breadcrumbs-custom-title"><i class="fas fa-phone"></i> Contactez Nous</h2>
+				<h2 class="breadcrumbs-custom-title"><i class="fas fa-box-open"></i> Nos Produits</h2>
 			</div>
 		</div>
 	</div>
@@ -93,124 +92,33 @@
 			<ul class="breadcrumbs-custom-path">
 				<li><a href="index.html">Acceuil</a></li>
 				<i class="fas fa-arrow-right small-icon"></i>
-				<li class="active">Contact</li>
+				<li class="active">Produits</li>
 			</ul>
 		</div>
 	</div>
 </section>
 
-<!-- Formulaire de contact -->
-<section class="section section-xl bg-default text-md-left">
+<!-- Product -->
+<section class="section section-xxl bg-default text-md-left">
 	<div class="container">
-		<div class="title-classic">
-			<h3 class="title-classic-title">Ekem's Creative</h3>
-			<p class="title-classic-subtitle">Nous sommes disponibles 24/7 par WhatsApp, e-mail ou autre reseau social. Vous pouvez utiliser nos <br class="d-none d-lg-block">contacts pour toutes questions relatives a nos services et produits.</p>
-		</div>
-		<form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
-			<div class="row row-20 row-md-30">
-				<div class="col-lg-8">
-					<div class="row row-20 row-md-30">
-						<div class="col-sm-6">
-							<div class="form-wrap">
-								<input class="form-input form-control-has-validation" id="contact-first-name-2" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span>
-								<label class="form-label rd-input-label" for="contact-first-name-2">Prenom(s)</label>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-wrap">
-								<input class="form-input form-control-has-validation" id="contact-last-name-2" type="text" name="name" data-constraints="@Required"><span class="form-validation"></span>
-								<label class="form-label rd-input-label" for="contact-last-name-2">Nom</label>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-wrap">
-								<input class="form-input form-control-has-validation" id="contact-email-2" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
-								<label class="form-label rd-input-label" for="contact-email-2">E-mail</label>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-wrap">
-								<input class="form-input form-control-has-validation" id="contact-phone-2" type="text" name="phone" data-constraints="@Numeric"><span class="form-validation"></span>
-								<label class="form-label rd-input-label" for="contact-phone-2">Tel</label>
-							</div>
-						</div>
-					</div>
+		<div class="row row-50">
+
+			<div class="col-lg-8 col-xl-9">
+				<div class="product-top-panel group-md">
+					<p class="product-top-panel-title">Les resultats 1–9 sur 28</p>
 				</div>
-				<div class="col-lg-4">
-					<div class="form-wrap">
-						<label class="form-label rd-input-label" for="contact-message-2">Message</label>
-						<textarea class="form-input textarea-lg form-control-has-validation form-control-last-child" id="contact-message-2" name="phone" data-constraints="@Required"></textarea><span class="form-validation"></span>
-					</div>
-				</div>
-			</div>
-			<button class="button button-lg button-secondary button-zakaria" type="submit">Envoyer</button>
-		</form>
-	</div>
-</section>
 
 
-<!-- Contacts -->
-<section class="section section-xl bg-gray-4 justify-content-center align-items-center">
-	<div class="container justify-content-center">
-		<div class="row row-30 justify-content-center">
-			<div class="col-sm-6 col-md-4">
-				<h4>Telephones</h4>
-				<ul class="contacts-classic">
-					<li>Bureau <a href="tel:+237620255231">+237 620 25 52 31</a>
-					</li>
-					<li>WhatsApp <a href="tel:#">+237 656 62 99 37</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<h4>Addresse</h4>
-				<div class="contacts-classic"><a href="#">523 Sylvan Ave, 5th Floor <br>Mountain View, CA 94041 Cameroun</a></div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<h4>Mail</h4>
-				<ul class="contacts-classic">
-					<li><a href="mailTo:infoekemscreative@gmail.com">infoekemscreative@gmail.com</a></li>
-				</ul>
+				<?php
+					$right_path = 'backend/' ;
+					$db = 'AdminSpace/db.php' ;
+					include $db;
+					include "config/card_product.php"
+				?>
 			</div>
 		</div>
 	</div>
 </section>
-
-<!-- Localisation -->
-<section class="section">
-	<div class="google-map-container lazy-loaded px-5" style="background-color: rgb(229, 227, 223);">
-		<div class="row justify-content-center comment-bg">
-			<div class="col-lg-7 col-md-12">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.063782439745!2d11.5189535!3d3.7962702999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bd1a2e24a511d%3A0x8d206c1ae5cc2402!2sEKEM&#39;S%20CREATIVE%20Sarl!5e0!3m2!1sfr!2scm!4v1717604691044!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-			<div class="col-lg-5 col-md-12 comment-round d-flex flex-column align-items-center">
-				<div class="comment_card">
-					<span class="comment_title">Laisser un commentaire/avis</span>
-					<form class="comment_form" method="post" action="config/comment_form.php">
-						<div class="comment_form_group">
-							<input placeholder="" type="text" id="nom" name="nom" required="required">
-							<label for="nom">Votre nom</label>
-						</div>
-						<div class="comment_form_group">
-							<input placeholder="" type="text" id="structure" name="structure" required="required">
-							<label for="structure">Votre Structure/Entreprise</label>
-						</div>
-						<div class="comment_form_group">
-							<input placeholder="" type="number" id="etoiles" name="etoiles" min="0" max="5" step="1" required="required">
-							<label for="etoiles">Nombre d'étoiles (de 1 à 5)</label>
-						</div>
-						<div class="comment_form_group">
-							<textarea placeholder="" id="comment" name="comment" rows="5" required="required"></textarea>
-							<label for="comment">Votre commentaire</label>
-						</div>
-						<button type="submit">Commenter</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 
 
 <!-- Footer -->
@@ -220,8 +128,8 @@
 			<div class="row row-40 row-md-50 justify-content-xl-between">
 				<div class="col-sm-6 col-lg-4 col-xl-3 wow fadeInRight">
 					<div class="footer-classic-brand"><a class="brand" href="index.html">
-						<img class="brand-logo-dark" src="images/img.png" alt="" width="65" height="65" srcset="images/img.png 2x">
-						<img class="brand-logo-light" src="images/img.png" alt="" width="65" height="65" srcset="images/img.png 2x"></a>
+						<img class="brand-logo-dark" src="assets/img.png" alt="" width="65" height="65" srcset="assets/img.png 2x">
+						<img class="brand-logo-light" src="assets/img.png" alt="" width="65" height="65" srcset="assets/img.png 2x"></a>
 					</div>
 					<ul class="list-schedule">
 						<li><span>Jour de la Semaine :</span><span>08H - 20H</span></li>
@@ -274,7 +182,7 @@
 					<h4 class="footer-classic-title text-transform-uppercase">Newsletter</h4>
 					<p>"Inscrivez-vous à notre newsletter pour recevoir chaque semaine les dernières actualités, mises à jour, offres spéciales et réductions exclusives."</p>
 					<!-- RD Mailform-->
-					<form class="rd-form rd-mailform rd-form-inline rd-form-inline-2" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="config/mailform.php" novalidate="novalidate">
+					<form class="rd-form rd-mailform rd-form-inline rd-form-inline-2" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
 						<div class="form-wrap">
 							<input class="form-input form-control-has-validation" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
 							<label class="form-label rd-input-label" for="subscribe-form-2-email">Votre adresse mail</label>
@@ -309,7 +217,6 @@
 		</div>
 	</div>
 </footer>
-
 
 <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-P9FT69"></script>
@@ -362,7 +269,6 @@
         margin-right: 0; /* Enlever la marge à droite du dernier élément */
     }
 </style>
-
 
 </body>
 </html>
