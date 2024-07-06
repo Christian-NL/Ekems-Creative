@@ -6,7 +6,7 @@
 <?php include 'config/get_css.php' ?>
 
 <body>
-    <?php include 'config/navigation.php' ?>
+    <?php include 'config/get_nav.php' ?>
     <?php include 'config/header_second.php' ?>
     <?php include 'config/get_form_contact.php' ?>
     <?php include 'config/get_contacts_section.php' ?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,11 @@
 
             <p class="description">
                 <input name="teamMemberPost" class="validate[required,length[6,50]] feedback-input" id="teamMemberPost" placeholder="Position / Poste" required />
+                <span id="teamMemberPost-error"></span>
+            </p>
+            
+            <p class="description">
+                <textarea name="teamMemberDescription" class="validate[required,length[15,150]] feedback-input" id="teamMemberDescription" placeholder="Description" required /></textarea>
                 <span id="productDescription-error"></span>
             </p>
 

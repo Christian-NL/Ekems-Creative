@@ -6,35 +6,15 @@ include_once("../config/db.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize the data
     $productName = htmlspecialchars($_POST["teamMemberName"]);
-    $productDescription = htmlspecialchars($_POST["teamMemberPost"]);
-
-    // File upload handling
-    /*if (isset($_FILES["realisationImage"])) {
-        $targetFolder = "Image/Realisation/";
-        $allowedTypes = ['image/jpeg', 'image/png'];
-
-        if (!file_exists($targetFolder)) {
-            mkdir($targetFolder, 0777, true);
-        }
-
-        $imageFileType = $_FILES["realisationImage"]["type"];
-
-        if (in_array($imageFileType, $allowedTypes)) {
-            $uniqueFileName = uniqid() . '_' . basename($_FILES["realisationImage"]["name"]);
-            $targetFile = $targetFolder . $uniqueFileName;
-            move_uploaded_file($_FILES["realisationImage"]["tmp_name"], $targetFile);
-            $productImagePath = $targetFile;
-        } else {
-            die("Invalid file type. Only JPEG and PNG images are allowed.");
-        }
-    }*/
+    $teamMemberPost = htmlspecialchars($_POST["teamMemberPost"]);
+    $teamMemberDescription = htmlspecialchars($_POST["teamMemberDescription"]);
 
     if (isset($_FILES["teamMemberImage"])) {
-        $targetFolder = "../Image/TeamMember/";
+        $targetFolder = __DIR__ . "/../Image/TeamMember/";
 
         $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'heif', 'heic'];
-        $filename = $_FILES["teamMemberImage"]["name"];
-        $fileExtension = pathinfo($filename, PATHINFO_EXTENSION);
+        $file_name = $_FILES["teamMemberImage"]["name"];
+        $fileExtension = pathinfo($file_name, PATHINFO_EXTENSION);
 
         if (!in_array($fileExtension, $allowedExtensions)) {
             die("Extension de fichier non autorisée. Seuls les fichiers JPG, JPEG, PNG, GIF, HEIF et HEIC sont autorisés.");
@@ -45,25 +25,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mkdir($targetFolder, 0777, true);
         }
 
-        $imageFileType = $_FILES["teamMemberImage"]["type"];
-        $allowedTypesRegex = '/(\.jpg|\.jpeg|\.png|\.gif|\.heif|\.heic)$/i';
-
-        if (preg_match($allowedTypesRegex, $filename)) {
-            $uniqueFileName = uniqid() . '_' . basename($_FILES["teamMemberImage"]["name"]);
-            $targetFile = $targetFolder . $uniqueFileName;
-            move_uploaded_file($_FILES["teamMemberImage"]["tmp_name"], $targetFile);
-            $productImagePath = $targetFile;
+        $uniqueFileName = uniqid() . '_' . basename($file_name);
+        $targetFile = $targetFolder . $uniqueFileName;
+        if (move_uploaded_file($_FILES["teamMemberImage"]["tmp_name"], $targetFile)) {
+            $productImagePath = "Image/TeamMember/" . $uniqueFileName;
         } else {
-            die("Type de fichier non autorisé. Seuls les fichiers JPG, JPEG, PNG, GIF, HEIF et HEIC sont autorisés.");
+            die("Erreur lors du téléchargement du fichier.");
         }
     }
 
     // Insert data into the database using prepared statements
-    $stmt = $conn->prepare("INSERT INTO team (member_name, member_image_path, member_position) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $productName, $productImagePath, $productDescription);
+    $stmt = $conn->prepare("INSERT INTO team (member_name, member_image_path, member_position, member_description) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $productName, $productImagePath, $teamMemberPost ,$teamMemberDescription);
 
     if ($stmt->execute()) {
-        echo "nouveau memebre du staff enregistré avec succès.";
+        echo "nouveau membre du staff enregistré avec succès.";
         header("Location: ../all_staff_members.php");
     } else {
         echo "Erreur lors de l'enregistrement : " . $stmt->error;

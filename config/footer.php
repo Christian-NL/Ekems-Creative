@@ -61,7 +61,7 @@
                     <h4 class="footer-classic-title text-transform-uppercase">Newsletter</h4>
                     <p>"Inscrivez-vous à notre newsletter pour recevoir chaque semaine les dernières actualités, mises à jour, offres spéciales et réductions exclusives."</p>
                     <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform rd-form-inline rd-form-inline-2" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="../config/mailform.php" novalidate="novalidate">
+                    <form class="rd-form rd-mailform rd-form-inline rd-form-inline-2" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="config/mailform.php" novalidate="novalidate">
                         <div class="form-wrap">
                             <input class="form-input form-control-has-validation" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
                             <label class="form-label rd-input-label" for="subscribe-form-2-email">Votre adresse mail</label>

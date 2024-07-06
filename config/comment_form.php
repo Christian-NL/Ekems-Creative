@@ -1,6 +1,6 @@
 <?php
 global $conn;
-include_once("backend/config/db.php");
+include_once("../AdminSpace/db.php");
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -11,7 +11,7 @@
 <body>
 
 <?php
-    include 'config/test_file.php';
+    include 'config/get_nav.php';
     include 'config/header_second.php' ;
 
     include "config/single_product.php" ;

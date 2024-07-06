@@ -5,6 +5,7 @@
         <h1 class="mt-4">Tableau de Bord</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active">Tableau de Bord</li>
+            <li class="breadcrumb-item active">Membres de l'équipe</li>
         </ol>
         <div class="card mb-4">
             <div class="card-header">
@@ -54,7 +55,7 @@
                         function deleteMember(nomMembre) {
                             if (confirm("Êtes-vous sûr de vouloir supprimer ceci ?")) {
                                 var xhr = new XMLHttpRequest();
-                                xhr.open("POST", "delete/delete_team_member.php", true);
+                                xhr.open("POST", "/Ekems-Creative/backend/delete/delete_team_member.php", true);
                                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                                 xhr.onreadystatechange = function() {
                                     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {

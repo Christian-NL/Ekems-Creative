@@ -7,7 +7,7 @@
 <?php include 'config/get_css.php' ?>
 
 <body>
-    <?php include 'config/navigation.php' ?>
+    <?php include 'config/get_nav.php' ?>
     <?php include 'config/header_second.php' ?>
     <?php include "config/get_services.php"; ?>
     <?php include 'config/get_stay_connected.php' ?>

@@ -2,7 +2,7 @@
 global $conn;
 
 // Récupération des réalisations depuis la base de données
-$query = "SELECT realisation_title, image_path, realisation_desc, date_enregistrement FROM realisation";
+$query = "SELECT realisation_title, image_path, realisation_desc, date_enregistrement FROM realisation LIMIT 24 ORDER BY date_enregistrement DESC";
 $result = $conn->query($query);
 
 if ($result->num_rows > 0): ?>

@@ -1,4 +1,3 @@
-
 <?php
 global $conn;
 
@@ -26,6 +25,7 @@ if ($products_result) {
         while ($row = $products_result->fetch_assoc()) {
             // Générer le chemin complet de l'image
             $image_path = $right_path . $row['product_image_path'];
+            //$image_path = "../backend/" . $row['product_image_path'];
 
             // Vérifier si l'image existe
             if (file_exists($image_path)) {
@@ -94,54 +94,28 @@ if ($products_result) {
 }
 
 $conn->close();
-echo "<div class='row row-30 row-lg-50'>" . $output . "</div>";
+echo "<section class='section section-xxl bg-default text-md-left'><div class='container'><div class='row row-50'><div class='col-lg-8 row-cols-xl-9'><div class='product-top-panel group-md'><p class='product-top-panel-title'>Les resultats 1-9 sur " . $total_products . "</p></div><div class='row row-30 row-lg-50'>" . $output . "</div></div></div></div></section>";
+
+echo "<div class='pagination-wrap'><nav aria-label='Page navigation'><ul class='pagination'>";
+
+if ($current_page > 1) {
+    echo "<li class='page-item page-item-control'><a class='page-link' href='?page=" . ($current_page - 1) . "' aria-label='Previous'><i class='fas fa-arrow-left small-icon'></i><span class='icon' aria-hidden='true'></span></a></li>";
+} else {
+    echo "<li class='page-item page-item-control disabled'><a class='page-link' href='#' aria-label='Previous'><i class='fas fa-arrow-left small-icon'></i><span class='icon' aria-hidden='true'></span></a></li>";
+}
+
+for ($page = 1; $page <= $total_pages; $page++) {
+    echo "<li class='page-item " . ($page == $current_page ? 'active' : '') . "'><a class='page-link' href='?page=" . $page . "'>" . $page . "</a></li>";
+}
+
+if ($current_page < $total_pages) {
+    echo "<li class='page-item page-item-control'><a class='page-link' href='?page=" . ($current_page + 1) . "' aria-label='Next'><i class='fas fa-arrow-right small-icon'></i><span class='icon' aria-hidden='true'></span></a></li>";
+} else {
+    echo "<li class='page-item page-item-control disabled'><a class='page-link' href='#' aria-label='Next'><i class='fas fa-arrow-right small-icon'></i><span class='icon' aria-hidden='true'></span></a></li>";
+}
+
+echo "</ul></nav></div>";
 ?>
-
-
-
-<div class="pagination-wrap">
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <?php if ($current_page > 1): ?>
-                <li class="page-item page-item-control">
-                    <a class="page-link" href="?page=<?php echo $current_page - 1; ?>" aria-label="Previous">
-                        <i class="fas fa-arrow-left small-icon"></i>
-                        <span class="icon" aria-hidden="true"></span>
-                    </a>
-                </li>
-            <?php else: ?>
-                <li class="page-item page-item-control disabled">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <i class="fas fa-arrow-left small-icon"></i>
-                        <span class="icon" aria-hidden="true"></span>
-                    </a>
-                </li>
-            <?php endif; ?>
-
-            <?php for ($page = 1; $page <= $total_pages; $page++): ?>
-                <li class="page-item <?php echo ($page == $current_page) ? 'active' : ''; ?>">
-                    <a class="page-link" href="?page=<?php echo $page; ?>"><?php echo $page; ?></a>
-                </li>
-            <?php endfor; ?>
-
-            <?php if ($current_page < $total_pages): ?>
-                <li class="page-item page-item-control">
-                    <a class="page-link" href="?page=<?php echo $current_page + 1; ?>" aria-label="Next">
-                        <i class="fas fa-arrow-right small-icon'></i>
-                        <span class="icon" aria-hidden="true"></span>
-                    </a>
-                </li>
-            <?php else: ?>
-                <li class="page-item page-item-control disabled">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <i class="fas fa-arrow-right small-icon'></i>
-                        <span class="icon" aria-hidden="true"></span>
-                    </a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </nav>
-</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -215,6 +189,3 @@ echo "<div class='row row-30 row-lg-50'>" . $output . "</div>";
         });
     });
 </script>
-
-
-

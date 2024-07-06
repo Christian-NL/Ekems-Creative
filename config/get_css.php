@@ -118,3 +118,24 @@
     }
 
 </style>
+
+<style>
+    .pagination .page-item .page-link {
+        padding: 0.5rem 0.75rem;
+        margin: 0 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid #dee2e6;
+        color: #a26ce8;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #a26ce8;
+        border-color: #a26ce8;
+        color: white;
+    }
+
+    .pagination .page-item .page-link .small-icon {
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+</style>
