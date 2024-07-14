@@ -15,7 +15,14 @@ include 'config/get_css.php' ;
     include 'config/header_second.php' ;
 ?>
 
-<?php include 'product.php' ; ?>
+<?php
+$productFile = 'product.php';
+if (file_exists($productFile)) {
+    include $productFile;
+} else {
+    echo '<div>Erreur : Impossible de charger les produits.</div>';
+}
+?>
 
 <?php include 'config/footer.php'; ?>
 
