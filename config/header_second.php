@@ -64,6 +64,8 @@ function getPageName() {
         case 'contact_us.php':
         case 'contact_us.html':
             return 'Contact';
+        case 'realisation.php':
+            return 'Realisations';
         default:
             return '';
     }
@@ -74,7 +76,7 @@ function getBreadcrumbs() {
     $current_page = basename($_SERVER['PHP_SELF']);
 
     // Ajouter l'Accueil
-    $breadcrumbs[] = ['label' => 'Accueil', 'link' => 'index.html'];
+    $breadcrumbs[] = ['label' => 'Accueil', 'link' => 'index.php'];
 
     // Ajouter le lien de la page de Produits pour les pages de produit
     if ($current_page == 'single_product.php') {
