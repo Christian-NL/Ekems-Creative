@@ -11,7 +11,7 @@ include 'config/get_css.php' ;
 <body>
 
 <?php
-    include 'config\get_nav.php';
+    include 'config/get_nav.php';
     include 'config/header_second.php' ;
 ?>
 

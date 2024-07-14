@@ -16,7 +16,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <h4 class="font-weight-light font-weight-bold mb-0">Ekem's Creative</h4>
             </div>
 
-            <a class="nav-link cart-icon" href="panier.html">
+            <a class="nav-link cart-icon" href="">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count"><?php echo isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0; ?></span>
             </a>

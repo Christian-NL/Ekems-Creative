@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ekems-creative";
+$username = "u189509040_nlc";
+$password = "0nEz[B]!Lv&";
+$dbname = "u189509040_ekems_creative";
 
 // Connexion à la base de données
 $conn = new mysqli($servername, $username, $password, $dbname);
