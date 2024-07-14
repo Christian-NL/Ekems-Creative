@@ -3,6 +3,12 @@
 
 
 <?php
+global $conn;
+include_once 'backend/config/db.php';
+if (!$conn) {
+    die("La connexion à la base de données a échoué : " . mysqli_connect_error());
+}
+
 include 'config/get_head.php' ;
 include 'config/get_css.php' ;
 
@@ -128,7 +134,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
 </section>
 
 
-<section class="section parallax-container parallax-disabled" data-parallax-img="images/wild-4.jpg" style="background-image: url(&quot;../images/wild.jpg;);">
+<section class="section parallax-container parallax-disabled" data-parallax-img="images/wild-4.jpg" style="background-image: url(images/wild.jpg);">
     <div class="material-parallax parallax">
         <img src="images/wild-4.jpg" alt="" style="display: block; transform: translate3d(-50%, 193px, 0px);">
     </div>
@@ -199,7 +205,6 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
     </div>
 
     <?php
-    global $conn;
 
     // Récupération des réalisations depuis la base de données
     $query = "SELECT realisation_title, image_path, realisation_desc, date_enregistrement FROM realisation LIMIT 8 ORDER BY date_enregistrement DESC";
@@ -233,8 +238,6 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
     <?php else: ?>
         <p>Aucune réalisation trouvée.</p>
     <?php endif;
-
-    $conn->close();
     ?>
 </section>
 
@@ -378,6 +381,14 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </section>
+
+
+<?php
+include 'config/footer.php';
+include 'config/get_script.php';
+$conn->close();
+?>
+
 
 
 

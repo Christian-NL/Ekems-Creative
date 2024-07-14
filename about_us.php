@@ -4,7 +4,12 @@
 <html lang="fr">
 
 <?php
-    global $conn;
+global $conn;
+include_once 'backend/config/db.php';
+if (!$conn) {
+    die("La connexion à la base de données a échoué : " . mysqli_connect_error());
+}
+
     $right_path = 'backend/' ;
     $db = 'AdminSpace/db.php' ;
     include $db;

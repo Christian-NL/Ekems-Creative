@@ -1,7 +1,4 @@
 <?php
-global $conn;
-
-include_once 'backend/config/db.php';
 
 // Obtenir l'ID du produit depuis l'URL
 $product_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

@@ -1,11 +1,4 @@
 <?php
-include_once 'backend/config/db.php';
-
-// Vérifier si la connexion à la base de données est établie
-global $conn;
-if (!$conn) {
-    die("La connexion à la base de données a échoué : " . mysqli_connect_error());
-}
 
 function getPageTitleAndIcon() {
     // Obtenir le nom du fichier de la page en cours
@@ -37,7 +30,6 @@ function getPageTitleAndIcon() {
 }
 
 function getPageName() {
-    global $conn;
 
     // Obtenir le nom du fichier de la page en cours
     $current_page = basename($_SERVER['PHP_SELF']);
