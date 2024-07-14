@@ -1,41 +1,16 @@
 <!DOCTYPE html>
 <html class="wide wow-animation desktop portrait rd-navbar-fixed-linked" lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Ekem's Creative - Page d'acceuil</title>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" href="css/test.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/Style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCjH9BA29r2xk1TK6a0xVb1+0b5zUg0jLHR0" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
-        .ie-panel{
-            display: none;
-            background: #212121;
-            padding: 10px 0;
-            box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
-            clear: both;
-            text-align:center;
-            position: relative;
-            z-index: 1;
-        }
-        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
-            display: block;
-        }
-        .navbar-brand,
-        .navbar-nav .nav-link.active {
-            color: #FF9027;
-        }
-    </style>
+<?php
+include 'config/get_head.php' ;
+include 'config/get_css.php' ;
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
+    . '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>';
+?>
+
+
 <body>
 
 <!-- NavBAr -->
