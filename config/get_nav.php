@@ -27,7 +27,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bolder <?php echo ($current_page == 'index.php' || $current_page == 'index.html') ? 'active' : ''; ?>" href="index.html">Accueil</a>
+                    <a class="nav-link font-weight-bolder <?php echo ($current_page == 'index.php' || $current_page == 'index.html') ? 'active' : ''; ?>" href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link font-weight-bolder <?php echo ($current_page == 'produits.php' || $current_page == 'produits.html') ? 'active' : ''; ?>" href="produits.php">Produits</a>

@@ -1,8 +1,25 @@
 <?php
 
 function getPageTitleAndIcon() {
+    global $conn;
+
     // Obtenir le nom du fichier de la page en cours
     $current_page = basename($_SERVER['PHP_SELF']);
+
+    // Vérifier si c'est une page de produit spécifique
+    if ($current_page == 'single_product.php' && isset($_GET['id'])) {
+        // Requête pour obtenir le nom du produit
+        $product_id = (int)$_GET['id'];
+        $product_query = "SELECT product_name FROM product WHERE product_id = $product_id";
+        $product_result = $conn->query($product_query);
+
+        if ($product_result && $product_result->num_rows > 0) {
+            $product = $product_result->fetch_assoc();
+            // Définir l'icône pour les produits
+            $product_icon = 'fas fa-cube'; // Exemple d'icône pour les produits
+            return [$product['product_name'], $product_icon];
+        }
+    }
 
     // Mapping des noms de fichiers aux titres et icônes de pages
     switch ($current_page) {
@@ -23,13 +40,15 @@ function getPageTitleAndIcon() {
             return ['Contactez-Nous', 'fas fa-envelope'];
         case 'realisation.php':
         case 'realisation.html':
-            return ['Nos Oeuvres', 'fas fa-paint-brush'];
+            return ['Nos Œuvres', 'fas fa-paint-brush'];
         default:
             return ['', ''];
     }
 }
 
+
 function getPageName() {
+    global $conn;
 
     // Obtenir le nom du fichier de la page en cours
     $current_page = basename($_SERVER['PHP_SELF']);
@@ -65,11 +84,13 @@ function getPageName() {
         case 'contact_us.html':
             return 'Contact';
         case 'realisation.php':
-            return 'Realisations';
+            return 'Réalisations';
         default:
             return '';
     }
 }
+
+
 
 function getBreadcrumbs() {
     $breadcrumbs = [];

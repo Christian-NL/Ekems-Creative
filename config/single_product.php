@@ -14,7 +14,6 @@ if ($product_result && $product_result->num_rows > 0) {
     exit;
 }
 
-$conn->close();
 ?>
 
 <!-- Product Information -->
@@ -43,7 +42,7 @@ $conn->close();
                     <div class="group-md group-middle">
                         <div class="single-product-price"><?php echo $product['product_price']; ?> XAF</div>
                     </div>
-                    <p><?php echo $product['product_description']; ?></p>
+                    <p><?php echo $product['product_desc']; ?></p>
                     <hr class="hr-gray-100">
                     <div class="group-xs group-middle">
                         <div class="product-stepper">
@@ -53,7 +52,7 @@ $conn->close();
                                 <span class="stepper-arrow down"><i class="stepper-arrow fas fa-minus"></i></span>
                             </div>
                         </div>
-                        <div><a class="button button-lg button-secondary button-zakaria" href="cart-page.html">Ajouter au panier</a></div>
+                        <div><a class="button button-lg button-secondary button-zakaria" href="#">Ajouter au panier</a></div>
                     </div>
                     <hr class="hr-gray-100">
                     <div class="group-xs group-middle"><span class="list-social-title">Partager ce produit : </span>
@@ -75,8 +74,8 @@ $conn->close();
             <!-- Nav tabs-->
             <div class="nav-tabs-wrap">
                 <ul class="nav nav-tabs nav-tabs-1">
-                    <li class="nav-item" role="presentation"><a class="nav-link active show" href="#tabs-1-1" data-toggle="tab">Reviews</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">Information</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active show" href="#tabs-1-1" data-toggle="tab">Details supplementaires</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">Information de Ekem's Creative</a></li>
                 </ul>
             </div>
             <!-- Tab panes-->
@@ -85,72 +84,39 @@ $conn->close();
                     <!-- Product Reviews-->
                     <div class="box-comment">
                         <div class="unit flex-column flex-md-row unit-spacing-md">
-                            <div class="unit-left">
-                                <div class="box-comment-image">
-                                    <img src="images/user-1-42x42.jpg" alt="" width="42" height="42">
-                                </div>
-                            </div>
                             <div class="unit-body">
                                 <div class="group-sm group-justify">
                                     <div>
                                         <div class="group-xs group-middle">
-                                            <h5 class="box-comment-author">Eleanor Jennings</h5>
+                                            <h5 class="box-comment-author"><?php echo $product['product_desc']; ?></h5>
                                             <div class="box-rating">
                                                 <span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="box-comment-time">
-                                        <time datetime="2020-03-15">1 day ago</time>
-                                    </div>
                                 </div>
-                                <p class="box-comment-text">I purchased this bed for my daughter and she loves it! I was worried that the design might be a little girly, but it's actually quite neutral and fits in perfectly with her room decor. The bed itself is sturdy and was easy to assemble. Highly recommend!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-comment">
-                        <div class="unit flex-column flex-md-row unit-spacing-md">
-                            <div class="unit-left">
-                                <div class="box-comment-image">
-                                    <img src="images/user-2-42x42.jpg" alt="" width="42" height="42">
-                                </div>
-                            </div>
-                            <div class="unit-body">
-                                <div class="group-sm group-justify">
-                                    <div>
-                                        <div class="group-xs group-middle">
-                                            <h5 class="box-comment-author">Eleanor Jennings</h5>
-                                            <div class="box-rating">
-                                                <span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="box-comment-time">
-                                        <time datetime="2020-03-15">2 days ago</time>
-                                    </div>
-                                </div>
-                                <p class="box-comment-text">I purchased this bed for my daughter and she loves it!
-                                    I was worried that the design might be a little girly, but it's actually quite
-                                    neutral and fits in perfectly with her room decor. The bed itself is sturdy and
-                                    was easy to assemble. Highly recommend!</p>
+                                <p class="box-comment-text"><?php echo $product['product_other_information']; ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabs-1-2">
-                    <h6>Shipping Information</h6>
-                    <p>Our bed ships free within the contiguous 48 states. Most orders are delivered within 5-7 business days of purchase. Orders from outside the contiguous 48 states may be subject to additional shipping charges and delays.</p>
-                    <h6>Return Policy</h6>
-                    <p>If you are not satisfied with your bed, we offer a 30-day return policy. Simply contact our customer service team to initiate a return. Please note that the bed must be in its original condition and packaging for a full refund.</p>
-                    <h6>Warranty</h6>
-                    <p>We stand behind the quality of our beds with a 5-year limited warranty. This warranty covers any defects in materials or workmanship. For more information, please contact our customer service team.</p>
+                    <h4>Informations sur la Livraison</h4>
+                    <p>Nos services de sérigraphie, broderie et conception de designs sont disponibles pour une livraison gratuite dans la ville de Yaoundé dans la région du Centre Cameroun. La plupart des commandes sont livrées dans un délai de 5 à 7 jours ouvrables après paiement. Les commandes venant des autres villes peuvent être soumises à des frais de livraison et à des délais supplémentaires.</p>
+                    </br>
+                    <h4>Politique de Retour</h4>
+                    <p>Si vous n'êtes pas satisfait de nos services, nous offrons une politique de retour de 30 jours. Contactez simplement notre équipe de service client pour initier un retour. Veuillez noter que les articles doivent être dans leur état d'origine et emballage pour un remboursement complet.</p>
+                    </br>
+                    <h4>Garantie</h4>
+                    <p>Nous garantissons la qualité de nos services avec une garantie limitée de 3 mois. Cette garantie couvre tout défaut de matériaux ou de fabrication. Pour plus d'informations, veuillez contacter notre équipe de service client.</p>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
 
-<script>
+<script>/*
     document.addEventListener("DOMContentLoaded", function() {
     var url = window.location.href;
     var productName = document.querySelector(".product-title").innerText;
@@ -166,5 +132,55 @@ $conn->close();
 
     // WhatsApp
     document.getElementById("whatsapp-share").href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(productName) + " " + encodeURIComponent(url);
+    });*/
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Récupérez tous les boutons Ajouter au panier
+        const addToCartButton = document.querySelector('.button-zakaria');
+        // Récupérez le panier depuis le local storage ou créez un tableau vide s'il n'existe pas
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Ajoutez un événement de clic au bouton Ajouter au panier
+        addToCartButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = <?php echo $product_id; ?>;
+            const productName = "<?php echo addslashes($product['product_name']); ?>";
+            const productPrice = "<?php echo $product['product_price']; ?>";
+
+            // Vérifiez si le produit est déjà ajouté au panier
+            const existingProduct = cartItems.find(function(item) {
+                return item.id === productId;
+            });
+
+            if (existingProduct) {
+                // Si le produit existe déjà dans le panier, incrémente juste la quantité
+                existingProduct.quantity++;
+            } else {
+                // Sinon, créez un nouvel élément de produit et ajoutez-le au panier
+                cartItems.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1
+                });
+            }
+
+            // Mettez à jour le panier dans le local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Mettre à jour le badge du panier (fonction définie dans votre script principal)
+            updateCartBadge();
+        });
+
+        function updateCartBadge() {
+            const cartBadge = document.querySelector('.cart-count');
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            cartBadge.innerText = totalItems;
+        }
     });
 </script>
+
+

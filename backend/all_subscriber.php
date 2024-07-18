@@ -14,7 +14,7 @@
 
 
         <?php
-        include 'config/db.php';
+        include 'config/dbs.php';
         include 'pages/all_subscriber.php';
         include 'footer.php';
         ?>

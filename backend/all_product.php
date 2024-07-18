@@ -13,7 +13,7 @@
 
 
 
-        <?php include 'config/db.php';
+        <?php include 'config/dbs.php';
         include 'pages/all_product.php';
         include 'footer.php';
         ?>

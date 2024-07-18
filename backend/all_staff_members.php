@@ -14,7 +14,7 @@
 
 
         <?php
-        include 'config/db.php';
+        include 'config/dbs.php';
         include 'pages/content_team_members.php';
         include 'footer.php';
         ?>

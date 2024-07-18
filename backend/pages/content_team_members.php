@@ -55,7 +55,7 @@
                         function deleteMember(nomMembre) {
                             if (confirm("Êtes-vous sûr de vouloir supprimer ceci ?")) {
                                 var xhr = new XMLHttpRequest();
-                                xhr.open("POST", "/Ekems-Creative/backend/delete/delete_team_member.php", true);
+                                xhr.open("POST", "delete/delete_team_member.php", true);
                                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                                 xhr.onreadystatechange = function() {
                                     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {

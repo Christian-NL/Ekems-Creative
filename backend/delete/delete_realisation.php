@@ -1,6 +1,6 @@
 <?php
 global $conn;
-include("../config/session_control.php");
+//include("../config/session_control.php");
 include_once("../config/db.php");
 
 if (isset($_POST['titreRealisation'])) {

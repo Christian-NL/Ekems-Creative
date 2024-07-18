@@ -67,7 +67,7 @@ global $conn;
     function deleteSubscriber(username) {
         if (confirm("Êtes-vous sûr de vouloir supprimer cet administrateur ?")) {
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "../delete/delete_admin.php", true);
+            xhr.open("POST", "delete/delete_admin.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function() {
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {

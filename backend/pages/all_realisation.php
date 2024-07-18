@@ -55,7 +55,7 @@
                         function deleteRealisation(titreRealisation) {
                             if (confirm("Êtes-vous sûr de vouloir supprimer ceci ?")) {
                                 var xhr = new XMLHttpRequest();
-                                xhr.open("POST", "delete_realisation.php", true);
+                                xhr.open("POST", "delete/delete_realisation.php", true);
                                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                                 xhr.onreadystatechange = function() {
                                     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {

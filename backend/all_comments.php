@@ -14,7 +14,7 @@
 
 
         <?php
-        include 'config/db.php';
+        include 'config/dbs.php';
         include 'pages/all_comments.php';
         include 'footer.php';
         ?>

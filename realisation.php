@@ -6,7 +6,7 @@
 <html lang="fr">
 <?php
 global $conn;
-include_once 'backend/config/db.php';
+include_once 'backend/config/dbs.php';
 if (!$conn) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
 }
@@ -19,16 +19,13 @@ include 'config/get_head.php' ?>
 
 <?php
 $right_image_path = 'backend/' ;
-$db = 'backend/config/db.php';
-include $db;
 include 'config/realisation.php';
 ?>
 
 <?php include 'config/footer.php' ?>
-</body>
-
 <?php include 'config/get_script.php' ;
 $conn->close(); ?>
+</body>
 
 </html>
 

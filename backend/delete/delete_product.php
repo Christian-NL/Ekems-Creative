@@ -1,7 +1,7 @@
 <?php
 global $conn;
-include("backend/config/session_control.php");
-include_once("backend/config/db.php");
+//include("backend/config/session_control.php");
+include_once("../config/db.php");
 
 if (isset($_POST['nomProduit'])) {
     $nomProduit = $_POST['nomProduit'];
