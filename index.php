@@ -220,6 +220,8 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
             <h3 class="font-weight-regular">Témoignages</h3>
             <div class="row row-lg row-30 justify-content-center">
                 <?php
+                    global $conn;
+                    include_once 'backend/config/db.php';
                     include 'config/get_testimonials.php';
                     echo getTestimonials($conn);
                 ?>
@@ -327,6 +329,8 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
             <h2 class="text-transform-capitalize wow fadeScale">Nos Produits</h2>
             <?php
             global $conn;
+            $right_path = 'backend/' ;
+            include_once 'backend/config/db.php';
 
             // Définir le nombre de produits à afficher sur la page d'accueil
             $products_to_display = 4;
