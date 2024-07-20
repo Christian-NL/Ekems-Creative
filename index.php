@@ -6,7 +6,6 @@
 global $conn;
 $right_path = 'backend/' ;
 include_once 'backend/config/db.php';
-include 'config/get_team_member.php';
 if (!$conn) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
 }
@@ -220,7 +219,10 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
         <div class="container">
             <h3 class="font-weight-regular">Témoignages</h3>
             <div class="row row-lg row-30 justify-content-center">
-                <?php echo getTestimonials($conn); ?>
+                <?php
+                    include 'config/get_team_member.php';
+                    echo getTestimonials($conn);
+                ?>
             </div>
         </div>
     </section>
