@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+/*  $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "ekems-creative";
@@ -10,9 +10,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Vérifier la connexion
 if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
-}
+}  */
 
-/*
+
 $servername = "localhost";
 $username = "u189509040_nlc";
 $password = "0nEz[B]!Lv&";
@@ -25,6 +25,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("La connexion à la base de données a échoué : " . $conn->connect_error);
 }
-*/
+
 
 ?>

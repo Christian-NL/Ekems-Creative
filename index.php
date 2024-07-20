@@ -6,6 +6,7 @@
 global $conn;
 $right_path = 'backend/' ;
 include_once 'backend/config/db.php';
+include 'config/get_team_member.php';
 if (!$conn) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
 }

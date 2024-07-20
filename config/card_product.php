@@ -1,6 +1,5 @@
 
 <?php
-global $conn;
 
 // Définir le nombre de produits par page
 $products_per_page = 9;
