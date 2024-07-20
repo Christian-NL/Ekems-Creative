@@ -26,7 +26,7 @@
                             <textarea placeholder="" id="comment" name="comment" rows="5" required="required"></textarea>
                             <label for="comment">Votre commentaire</label>
                         </div>
-                        <button type="submit">Commenter</button>
+                        <button type="submit" value="Envoyer">Commenter</button>
                     </form>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <?php
 global $conn;
-include_once("../AdminSpace/db.php");
+include_once '../backend/config/db.php';
 
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Exécuter la requête
         if ($stmt->execute()) {
             echo "Votre témoignage a été enregistré avec succès.";
-            header("Location: $_SERVER[HTTP_REFERER]");
+            if (isset($_SERVER['HTTP_REFERER'])) {
+                header("Location: " . $_SERVER['HTTP_REFERER']);
+                exit;
+            } else {
+                header("Location: ../contact_us.php");
+                exit;
+            }
         } else {
             echo "Erreur lors de l'enregistrement du témoignage : " . $stmt->error;
         }
