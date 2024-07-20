@@ -33,6 +33,7 @@ function getTestimonials($conn) {
             $output .= '</div>';
             $output .= '</article>';
             $output .= '</div>';
+            $output .= '</div>';
         }
     } else {
         $output = "<strong style='font-size: 20px;'>Aucun témoignages pour le moment.</strong>";
