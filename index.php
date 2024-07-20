@@ -4,6 +4,7 @@
 
 <?php
 global $conn;
+$right_path = 'backend/' ;
 include_once 'backend/config/db.php';
 if (!$conn) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
@@ -106,6 +107,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
 </section>
 
 
+<!-- Welcome section -->
 <section class="section section-inset-2 bg-default text-md-left">
     <div class="container">
         <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
@@ -133,7 +135,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
     </div>
 </section>
 
-
+<!-- Services -->
 <section class="section parallax-container parallax-disabled" data-parallax-img="images/wild-4.jpg" style="background-image: url(images/wild.jpg);">
     <div class="material-parallax parallax">
         <img src="images/wild-4.jpg" alt="" style="display: block; transform: translate3d(-50%, 193px, 0px);">
@@ -201,97 +203,22 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
             <div class="col-12">
                 <h2 class="wow fadeScale">Notre Gallery</h2>
             </div>
+            <?php include 'config/realisation.php'; ?>
         </div>
     </div>
-
-    <?php
-
-    // Récupération des réalisations depuis la base de données
-    $query = "SELECT realisation_title, image_path, realisation_desc, date_enregistrement FROM realisation LIMIT 8 ORDER BY date_enregistrement DESC";
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0): ?>
-        <section class="section section-xl bg-default">
-            <div class="container isotope-wrap">
-                <div class="row row-30 isotope" data-lightgallery="group" style="position: relative;">
-                    <?php while ($row = $result->fetch_assoc()): ?>
-                        <?php $image_path = $right_image_path . $row['image_path']; ?>
-                        <div class="col-sm-6 col-lg-4 isotope-item" data-filter="Type 2" style="position: absolute;">
-                            <!-- Thumbnail Classic-->
-                            <article class="thumbnail-modern-2">
-                                <div class="thumbnail-modern-figure">
-                                    <img src="<?php echo $image_path; ?>" alt="" width="370" height="315">
-                                </div>
-                                <div class="thumbnail-modern-caption-2">
-                                    <h4 class="thumbnail-modern-title-2"><a href="#"><?php echo $row['realisation_title']; ?></a></h4>
-                                    <div class="thumbnail-subtitle"><?php echo $row['realisation_desc']; ?></div>
-                                    <a class="button fl-bigmug-line-search74" href="<?php echo $row['image_path']; ?>" data-lightgallery="item">
-                                        <img src="<?php echo $row['image_path']; ?>" alt="" width="370" height="315">
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-            </div>
-        </section>
-    <?php else: ?>
-        <p>Aucune réalisation trouvée.</p>
-    <?php endif;
-    ?>
 </section>
 
 
-<?php
-
-// Requête SQL pour récupérer les témoignages triés par date
-$sql = "SELECT * FROM temoignages ORDER BY date_enregistrement DESC LIMIT 3";
-$result = $conn->query($sql);
-$output = "";
-
-if ($result->num_rows > 0) {
-    // Parcourir les résultats et afficher chaque témoignage
-    while($row = $result->fetch_assoc()) {
-        $output .= '<div class="col-sm-6 col-lg-4">';
-        $output .= '<!-- Commentaire du témoignage -->';
-        $output .= '<article class="quote-creative">';
-        $output .= '<div class="quote-creative-text">';
-        $output .= '<div class="q">' . $row['commentaire'] . '</div>';
-        $output .= '</div>';
-        $output .= '<div class="quote-creative-rating">';
-        for ($i = 0; $i < $row['etoiles']; $i++) {
-            $output .= '<span class="icon mdi mdi-star"></span>';
-        }
-        for ($i = 0; $i < 5 - $row['etoiles']; $i++) {
-            $output .= '<span class="icon mdi mdi-star-outline"></span>';
-        }
-        $output .= '</div>';
-        $output .= '<div class="unit unit-spacing-sm flex-column flex-md-row align-items-center">';
-        $output .= '<div class="unit-body">';
-        $output .= '<div class="quote-creative-author">' . $row['nom'] . '</div>';
-        $output .= '<div class="quote-creative-author" style="font-weight: smaller; font-style: italic;">chez ' . $row['structure'] . '</div>';
-        $output .= '<div class="quote-creative-author">' . $row['date_enregistrement'] . '</div>';
-        $output .= '</div>';
-        $output .= '</div>';
-        $output .= '</article>';
-        $output .= '</div>';
-    }
-} else {
-    $output = "<strong style='font-size: 20px;'>Aucun témoignages pour le moment.</strong>";
-}
-
-?>
-
+<!-- Temoignages -->
 <section class="section section-xxl bg-default" style="background-color: #e1e1e1;">
     <div class="container">
         <h3 class="font-weight-regular">Témoignages</h3>
-        <div class="row row-lg row-30 justify-content-center">
-            <?php echo $output; ?>
-        </div>
+        <?php include 'config/get_testimonials.php' ?>
     </div>
 </section>
 
 
+<!-- Questions -->
 <section class="section section-lg bg-default text-md-left bg-gray-light">
     <div class="container">
         <div class="row row-30 justify-content-center align-items-md-center">
@@ -381,6 +308,88 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 </section>
+
+
+<!-- Produits -->
+<section class="section section-xxl bg-default">
+    <div class="container">
+        <h2 class="text-transform-capitalize wow fadeScale">Nos Produits</h2>
+        <?php
+        global $conn;
+
+        // Définir le nombre de produits à afficher sur la page d'accueil
+        $products_to_display = 4;
+
+        // Requête pour obtenir les 4 produits les plus récents
+        $products_query = "SELECT product_id, product_name, product_price, product_image_path FROM product ORDER BY created_at DESC LIMIT $products_to_display";
+        $products_result = $conn->query($products_query);
+
+        $output = "";
+
+        if ($products_result) {
+            if ($products_result->num_rows > 0) {
+                while ($row = $products_result->fetch_assoc()) {
+                    // Générer le chemin complet de l'image
+                    $image_path = $right_path . $row['product_image_path'];
+
+                    // Vérifier si l'image existe
+                    if (file_exists($image_path)) {
+                        $output .= "
+                <div class='col-sm-6 col-md-4 col-lg-6 col-xl-4'>
+                    <article class='product'>
+                        <div class='product-body'>
+                            <div class='product-figure'><img src='" . $image_path . "' alt='' width='142' height='163'></div>
+                            <h5 class='product-title'>" . $row['product_name'] . "</h5>
+                            <div class='product-price-wrap'>
+                                <div class='product-price'>" . $row['product_price'] . " XAF</div>
+                            </div>
+                        </div>
+                        <div class='product-button-wrap'>
+                            <div class='product-button'>
+                                <a class='button button-primary button-zakaria fl-bigmug-line-search74' href='single_product.php?id=" . $row['product_id'] . "'>
+                                    <i class='fas fa-search small-icon thin-icon'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>";
+                    } else {
+                        // Message d'erreur si l'image n'existe pas
+                        $output .= "
+                <div class='col-sm-6 col-md-4 col-lg-6 col-xl-4'>
+                    <article class='product'>
+                        <div class='product-body'>
+                            <div class='product-figure'><img src=' " . $right_path ."Image/Produits/default_product.png' alt='Image non disponible' width='142' height='163'></div>
+                            <h5 class='product-title'>" . $row['product_name'] . "</h5>
+                            <div class='product-price-wrap'>
+                                <div class='product-price'>" . $row['product_price'] . " XAF</div>
+                            </div>
+                        </div>
+                        <div class='product-button-wrap'>
+                            <div class='product-button'>
+                                <a class='button button-primary button-zakaria fl-bigmug-line-search74' href='single_product.php?id=" . $row['product_id'] . "'>
+                                    <i class='fas fa-search small-icon thin-icon'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>";
+                    }
+                }
+            } else {
+                $output = "<p>Aucun produit trouvé.</p>";
+            }
+        } else {
+            $output = "<p>Erreur lors de la récupération des produits.</p>";
+        }
+
+        $conn->close();
+        echo "<div class='row row-30 row-lg-50'>" . $output . "</div>";
+        ?>
+
+    </div>
+</section>
+
 
 
 <?php
