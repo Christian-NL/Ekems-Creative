@@ -39,3 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Fermer la connexion à la base de données
 $conn->close();
 ?>
+
+
+    <!-- Votre autre script -->
+    <script src="js/script.js"></script>
+    <script src="get_script.php"></script>
+<?php include 'get_script.php' ?>

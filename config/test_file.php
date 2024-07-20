@@ -78,3 +78,4 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <!-- Votre autre script -->
 <script src="js/script.js"></script>
+<script src="get_script.php"></script>

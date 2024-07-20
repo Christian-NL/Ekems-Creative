@@ -216,5 +216,10 @@ echo "<div class='row row-30 row-lg-50'>" . $output . "</div>";
     });
 </script>
 
+<!-- Votre autre script -->
+<script src="js/script.js"></script>
+<script src="get_script.php"></script>
+<?php include 'get_script.php' ?>
+
 
 

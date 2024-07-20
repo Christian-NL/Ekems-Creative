@@ -19,13 +19,18 @@ include 'config/get_head.php' ?>
 
 <?php
 $right_image_path = 'backend/' ;
-include 'config/realisation.php';
+echo getRealisation($conn, $right_image_path);
 ?>
 
 <?php include 'config/footer.php' ?>
 <?php include 'config/get_script.php' ;
 $conn->close(); ?>
 </body>
+
+<!-- Votre autre script -->
+<script src="js/script.js"></script>
+<script src="get_script.php"></script>
+<?php include 'config/get_script.php' ?>
 
 </html>
 

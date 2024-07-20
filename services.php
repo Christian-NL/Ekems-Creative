@@ -25,4 +25,9 @@ include 'config/get_head.php' ?>
 
 </body>
 
+<!-- Votre autre script -->
+<script src="js/script.js"></script>
+<script src="get_script.php"></script>
+<?php include 'config/get_script.php' ?>
+
 </html>

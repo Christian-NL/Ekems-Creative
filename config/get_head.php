@@ -28,3 +28,9 @@ function getPageTitle() {
 <title><?php echo getPageTitle(); ?></title>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- Votre autre script -->
+    <script src="js/script.js"></script>
+    <script src="get_script.php"></script>
+<?php include 'get_script.php' ?>

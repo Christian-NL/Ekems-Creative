@@ -57,3 +57,9 @@
         </div>
     </div>
 </section>
+
+
+    <!-- Votre autre script -->
+    <script src="js/script.js"></script>
+    <script src="get_script.php"></script>
+<?php include 'get_script.php' ?>
