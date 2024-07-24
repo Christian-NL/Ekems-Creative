@@ -5,7 +5,7 @@
 
 <?php
 global $conn;
-include_once 'backend/config/dbs.php';
+include_once 'backend/config/db.php';
 if (!$conn) {
     die("La connexion à la base de données a échoué : " . mysqli_connect_error());
 }
