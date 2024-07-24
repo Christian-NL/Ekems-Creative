@@ -7,7 +7,7 @@ include_once 'backend/config/db.php';
 $products_to_display = 4;
 
 // Requête pour obtenir les 4 produits les plus récents
-$products_query = "SELECT product_id, product_name, product_price, product_image_path FROM product ORDER BY created_at DESC LIMIT $products_to_display";
+$products_query = "SELECT product_id, product_name, product_price, product_image_path FROM product ORDER BY product_reg_date DESC LIMIT $products_to_display";
 $products_result = $conn->query($products_query);
 
 $output = "";

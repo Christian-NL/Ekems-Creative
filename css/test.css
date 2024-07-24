@@ -9812,7 +9812,7 @@ html [class*='section-'].section-top-0 {
 }
 
 .bg-img-1 {
-    background-image: url(../images/ind-print-1.jpg);
+    background-image: url('../images/ind-print-1.jpg');
     background-color: #FF9027;
     background-repeat: no-repeat;
     background-size: cover;
