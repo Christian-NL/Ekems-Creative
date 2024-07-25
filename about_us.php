@@ -28,7 +28,9 @@ if (!$conn) {
         <div class="container">
             <h3 class="font-weight-regular">Témoignages</h3>
             <div class="row row-lg row-30 justify-content-center">
-                <?php echo getTestimonials($conn); ?>
+                <?php
+                    include 'config/get_testimonials.php';
+                ?>
             </div>
         </div>
     </section>

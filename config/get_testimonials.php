@@ -1,7 +1,5 @@
 <?php
 
-
-function getTestimonials($conn) {
     // Requête SQL pour récupérer les témoignages triés par date
     $sql = "SELECT * FROM temoignages ORDER BY date_enregistrement DESC LIMIT 6";
     $result = $conn->query($sql);
@@ -38,8 +36,9 @@ function getTestimonials($conn) {
     } else {
         $output = "<strong style='font-size: 20px;'>Aucun témoignages pour le moment.</strong>";
     }
-}
+
 ?>
+
 
 
     <!-- Votre autre script -->
