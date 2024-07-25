@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php
  global $conn;
 // Inclure le fichier de connexion à la base de données
-include_once("AdminSpace/db.php");
+include_once '../backend/config/db.php';
 
 // Vérifier que le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
