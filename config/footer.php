@@ -40,7 +40,7 @@
                         <li>
                             <div class="unit unit-spacing-sm flex-column flex-md-row">
                                 <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                                <div class="unit-body"><a href="#">xxx xxxxxxx xxxxx xxx, xxxxx<br>xxxx xxxxx, Yaounde Cameroun</a></div>
+                                <div class="unit-body"><a href="#">EKEM'S CREATIVE Sarl<br>BP 2931, Yaoundé Cameroun</a></div>
                             </div>
                         </li>
                         <li>

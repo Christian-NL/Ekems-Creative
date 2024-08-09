@@ -114,7 +114,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
             <div class="row row-30 align-items-center justify-content-center justify-content-xl-between">
                 <div class="col-md-5 col-lg-6 wow fadeInLeft">
                     <div class="intro-wrapper">
-                        <img src="images/paper.jpg" alt="" width="570" height="410">
+                        <img src="images/2h-media-xCeZgfgQ1wI.jpg" alt="" width="570" height="410">
                         <div class="quality-label">
                             <span>100%</span>
                             <span>quality</span>
@@ -123,13 +123,13 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                 </div>
                 <div class="col-md-7 col-lg-6 col-xl-5 text-left">
                     <div class="text-decor-right">
-                        <h2 class="wow fadeInRight" data-wow-delay=".1s">Welcome</h2>
-                        <h4 class="title-style-12 wow fadeInRight offset-top-20">To Ekem's Creative</h4>
+                        <h2 class="wow fadeInRight" data-wow-delay=".1s">Bienvenue</h2>
+                        <h4 class="title-style-12 wow fadeInRight offset-top-20">A Ekem's Creative</h4>
                     </div>
-                    <p class="offset-top-10 wow fadeInRight" data-wow-delay=".2s">For the last 20 years, we have been taking pride in the products we create for our customers to make their business more successful and give them low prices and top quality products.</p>
+                    <p class="offset-top-10 wow fadeInRight" data-wow-delay=".2s">Depuis notre création, nous nous engageons à offrir des services de qualité supérieure à nos clients pour les aider à réussir. Basés à Yaoundé, nous proposons des prix compétitifs et des produits de haute qualité.</p>
                     <div class="btn-group-1 wow fadeInRight" data-wow-delay=".3s">
-                        <div class="team-navy"><a class="button-default-outline button" href="#">read more</a></div>
-                        <div class="team-navy-status"><a href="#">get in touch</a></div>
+                        <div class="team-navy"><a class="button-default-outline button" href="#">en savoir plus</a></div>
+                        <div class="team-navy-status"><a href="#">nous contacter</a></div>
                     </div>
                 </div>
             </div>
@@ -153,7 +153,9 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                                 </div>
                             </div>
                             <h4 class="box-icon-modern-title"><a href="#">Impression</a></h4>
-                            <p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
+                            <p class="box-icon-modern-text">Transformez vos idées en réalité avec notre service d’impression
+                                de haute qualité. Que ce soit pour des documents, des brochures ou des affiches, nous
+                                garantissons des résultats impeccables et professionnels.</p>
                         </article>
                     </div>
                     <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s">
@@ -165,7 +167,9 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                                 </div>
                             </div>
                             <h4 class="box-icon-modern-title"><a href="#">Serigraphie</a></h4>
-                            <p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
+                            <p class="box-icon-modern-text">Donnez vie à vos designs avec notre service de sérigraphie.
+                                Idéal pour les textiles et autres supports, nous assurons des impressions durables et
+                                éclatantes qui captivent l’attention.</p>
                         </article>
                     </div>
                     <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".1s">
@@ -177,7 +181,8 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                                 </div>
                             </div>
                             <h4 class="box-icon-modern-title"><a href="#">Broderie</a></h4>
-                            <p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
+                            <p class="box-icon-modern-text">Ajoutez une touche d’élégance à vos textiles avec notre service de broderie.
+                                Parfait pour les logos et les motifs personnalisés, notre broderie offre une finition raffinée et résistante.</p>
                         </article>
                     </div>
                     <div class="col-sm-6 col-lg-3 wow fadeInLeft">
@@ -189,7 +194,9 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                                 </div>
                             </div>
                             <h4 class="box-icon-modern-title"><a href="#">conception de design</a></h4>
-                            <p class="box-icon-modern-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.</p>
+                            <p class="box-icon-modern-text">Faites ressortir votre marque avec notre service de conception graphique.
+                                De la création de logos aux supports marketing, nous vous aidons à communiquer efficacement et à
+                                vous démarquer.</p>
                         </article>
                     </div>
                 </div>
@@ -215,17 +222,17 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
 
 
     <!-- Testimonials -->
-    <section class="section section-xxl bg-default bg-gradient-1">
+    <!-- <section class="section section-xxl bg-default bg-gradient-1">
         <div class="container">
             <h3 class="font-weight-regular">Témoignages</h3>
             <div class="row row-lg row-30 justify-content-center">
-                <?php
+                <?php /*
                     include_once 'backend/config/db.php';
-                    include 'config/get_testimonials.php';
+                    include 'config/get_testimonials.php';*/
                 ?>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- FAQ -->
@@ -252,17 +259,18 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                             <div class="card-header" role="tab">
                                 <div class="card-title">
                                     <a id="accordion1-card-head-veaognkf" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-jnrogyge" aria-controls="accordion1-card-body-jnrogyge" aria-expanded="false" role="button" class="collapsed">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
+                                        Proposez-vous des services sur mesure ?
                                         <div class="card-arrow"><div class="icon fas fa-chevron-right"></div></div>
                                     </a>
                                 </div>
                             </div>
                             <div class="collapse" id="accordion1-card-body-jnrogyge" aria-labelledby="accordion1-card-head-veaognkf" data-parent="#accordion1" role="tabpanel" style="">
                                 <div class="card-body">
-                                    <p>Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.
-                                        Nullam fermentum, mi nec viverra convallis, nulla leo efficitur est, non viverra magna ex vel risus.
-                                        Maecenas et risus sed libero congue ultrices.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    <p> Nous proposons des services sur mesure pour répondre à vos besoins spécifiques.
+                                        Qu’il s’agisse de conception de design, d’impression, de sérigraphie ou de broderie,
+                                        nos designers sont aptes à répondre à vos attentes et à satisfaire vos commandes.
+                                        Que ce soit pour l’impression, la sérigraphie, la broderie ou la conception graphique,
+                                        nous collaborons avec vous pour créer des produits uniques et personnalisés.
                                     </p>
                                 </div>
                             </div>
@@ -272,7 +280,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                             <div class="card-header" role="tab">
                                 <div class="card-title">
                                     <a class="collapsed" id="accordion1-card-head-erlbqyly" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-cjlxndnp" aria-controls="accordion1-card-body-cjlxndnp" aria-expanded="false" role="button">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
+                                        Puis-je obtenir un devis personnalisé pour mon projet ?
                                         <div class="card-arrow">
                                             <div class="icon fas fa-chevron-right">
                                             </div>
@@ -282,10 +290,11 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                             </div>
                             <div class="collapse" id="accordion1-card-body-cjlxndnp" aria-labelledby="accordion1-card-head-erlbqyly" data-parent="#accordion1" role="tabpanel">
                                 <div class="card-body">
-                                    <p>Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.
-                                        Nullam fermentum, mi nec viverra convallis, nulla leo efficitur est, non viverra magna ex vel risus.
-                                        Maecenas et risus sed libero congue ultrices.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    <p>Satisfaire vos besoins est notre priorité. 
+                                        Pour cela, nous collaborons étroitement avec vous afin d’obtenir des résultats exceptionnels. 
+                                        Vous pouvez obtenir un devis personnalisé en nous fournissant les détails de votre projet. 
+                                        Nous évaluerons vos besoins et vous proposerons une offre sur mesure, avec des prix 
+                                        compétitifs et des délais de livraison transparents.
                                     </p>
                                 </div>
                             </div>
@@ -295,7 +304,7 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                             <div class="card-header" role="tab">
                                 <div class="card-title">
                                     <a class="collapsed" id="accordion1-card-head-wdlqmxrs" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-yfiovxmv" aria-controls="accordion1-card-body-yfiovxmv" aria-expanded="false" role="button">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
+                                        Offrez-vous des réductions pour les grosses commandes ?
                                         <div class="card-arrow">
                                             <div class="icon fas fa-chevron-right">
                                             </div>
@@ -305,10 +314,11 @@ echo '<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>'
                             </div>
                             <div class="collapse" id="accordion1-card-body-yfiovxmv" aria-labelledby="accordion1-card-head-wdlqmxrs" data-parent="#accordion1" role="tabpanel">
                                 <div class="card-body">
-                                    <p>Sed pulvinar lacus vel sem tincidunt, ut accumsan libero vestibulum.
-                                        Nullam fermentum, mi nec viverra convallis, nulla leo efficitur est, non viverra magna ex vel risus.
-                                        Maecenas et risus sed libero congue ultrices.
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    <p>Gardez le contrôle sur votre portefeuille et économisez vos dépenses chez nous.
+                                        Nous offrons des réductions pour les commandes en gros.
+                                        Plus vous commandez, plus vous économisez.
+                                        Contactez-nous pour discuter de vos besoins et obtenir une offre avantageuse
+                                        pour vos projets de grande envergure.
                                     </p>
                                 </div>
                             </div>

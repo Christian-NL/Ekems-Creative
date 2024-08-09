@@ -24,16 +24,6 @@ if (!$conn) {
     <?php include 'config/get_about_section.php'?>
     <?php include 'config/get_our_history.php' ?>
     <?php include 'config/get_team_member.php'; ?>
-    <section class="section section-xxl bg-default" style="background-color: #e1e1e1;">
-        <div class="container">
-            <h3 class="font-weight-regular">Témoignages</h3>
-            <div class="row row-lg row-30 justify-content-center">
-                <?php
-                    include 'config/get_testimonials.php';
-                ?>
-            </div>
-        </div>
-    </section>
     <?php include "config/footer.php";
     include 'config/get_script.php';
     $conn->close(); ?>

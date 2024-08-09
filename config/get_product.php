@@ -93,7 +93,6 @@ if ($products_result) {
     $output = "<p>Erreur lors de la récupération des produits.</p>";
 }
 
-$conn->close();
 echo "<section class='section section-xxl bg-default text-md-left'><div class='container'><div class='row row-50'><div class='col-lg-8 row-cols-xl-9'><div class='product-top-panel group-md'><p class='product-top-panel-title'>Les resultats 1-9 sur " . $total_products . "</p></div><div class='row row-30 row-lg-50'>" . $output . "</div></div></div></div></section>";
 
 echo "<div class='pagination-wrap'><nav aria-label='Page navigation'><ul class='pagination'>";

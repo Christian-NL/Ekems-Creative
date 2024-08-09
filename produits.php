@@ -33,7 +33,6 @@ if (file_exists($productFile)) {
 <?php include 'config/footer.php'; ?>
 
 <?php include 'config/get_script.php' ;
-$conn->close();
 ?>
 
 </body>
@@ -41,6 +40,8 @@ $conn->close();
 <!-- Votre autre script -->
 <script src="js/script.js"></script>
 <script src="get_script.php"></script>
-<?php include 'config/get_script.php' ?>
+<?php include 'config/get_script.php' ;
+$conn->close();
+?>
 
 </html>

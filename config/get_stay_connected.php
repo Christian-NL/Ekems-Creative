@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-8 col-xl-9 inset-lg-bottom-10">
                     <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform rd-form-inline form-lg rd-form-text-center" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="mailform.php" novalidate="novalidate">
+                    <form class="rd-form rd-mailform rd-form-inline form-lg rd-form-text-center" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="config/mailform.php" novalidate="novalidate">
                         <div class="form-wrap wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                             <input class="form-input form-control-has-validation" id="subscribe-form-0-email" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
                             <label class="form-label rd-input-label" for="subscribe-form-0-email">Entrez votre addresse mail</label>
